@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  background: rgb(19, 19, 19);
+}
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.video-container {
+  display: flex;
+  width: 550px;
+  padding: 1rem;
+  justify-content: space-around;
+}
+.video-item > h2 {
+  text-align: center;
+  color: #eee;
+}
+.video-item > video {
+  border: 2px solid red;
+  width: 250px;
+  height: 188px;
+  background: #eee;
+  margin: 30px;
+}
+button,
+a {
+  border: none;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #ccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
