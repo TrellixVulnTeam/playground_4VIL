@@ -6,6 +6,7 @@
   </head>
   <body>
     <div id="data"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -14,25 +15,10 @@
     <script>
       const url =
         "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=Q6HLthLtNefsdnuXMbBT%2FjU3G7LtVBjKMEkVn%2BDzlJMtubt80uG%2BqMfP%2FZEfwh9DSrD5I%2F73%2B%2BG7FYAtn%2FvSwA%3D%3D";
-      http: $.ajax({
-        url: url,
-        type: "GET",
-        dataType: "xml",
-        success: function (response) {
-          xmlParsing(response);
-        },
-      });
-      function xmlParsing(data) {
-        console.log(data);
-      }
-      // fetch(url)
-      //   .then((response) => response.text())
-      //   .then((data) => {
-      //     const parser = new DOMParser();
-      //     const xml = parser.parseFromString(data, "application/xml");
-      //     console.log(xml);
-      //   })
-      //   .catch(console.error);
+      axios
+        .get(url)
+        .then((res) => console.log(res.data))
+        .catch((error) => console.log(error));
     </script>
     <!-- <div id="map" style="width: 100%; height: 100vh"></div>
 
@@ -110,5 +96,6 @@
         };
       }
     </script> -->
+    <script src="./main.js"></script>
   </body>
 </html>
