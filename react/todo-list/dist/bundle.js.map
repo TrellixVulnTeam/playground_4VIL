@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","sources":["../src/js/index.js"],"sourcesContent":["import \"../scss/style.scss\";\n\nlet a = 1000;\nlet b = 2000;\n\nconsole.log(a + b);\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;AAEA,IAAI,CAAC,GAAG,IAAI,CAAC;AACb,IAAI,CAAC,GAAG,IAAI,CAAC;AACb;AACA,OAAO,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC;;"}
