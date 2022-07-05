@@ -7,14 +7,19 @@ const initialErrorData = {
   confirmPw: "",
 };
 
-const Form = () => {
+const Form = ({ modalRef }) => {
   const [errorData, setErrorData] = useState(initialErrorData);
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isValid = Object.values(errorData).every((value) => value === true);
+    isValid && modalRef.current.showModal();
+  };
   return (
     <form
       id="form"
       className="w-full max-w-md m-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
       autoComplete="off"
+      onSubmit={handleSubmit}
     >
       <FormInput
         id={"id"}

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useRef } from "react";
 import "./App.css";
 import FontControlBox from "./components/FontControlBox";
 import Footer from "./components/Footer";
@@ -18,15 +18,16 @@ export const FormContext = createContext({
 
 function App() {
   const [formData, setFormData] = useState(initialFormData);
+  const modalRef = useRef(null);
 
   return (
     <FormContext.Provider value={{ formData, setFormData }}>
       <section className="form-wrapper">
-        <Form />
+        <Form modalRef={modalRef} />
         <Footer />
       </section>
       <FontControlBox />
-      <Modal />
+      <Modal ref={modalRef} />
     </FormContext.Provider>
   );
 }
